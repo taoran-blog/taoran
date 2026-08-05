@@ -155,9 +155,9 @@ comments:
   use: giscus
   giscus:
     repo: taoran-blog/taoran
-    repo_id:
+    repo_id: R_kgDOTufwyw
     category: Announcements
-    category_id:
+    category_id: DIC_kwDOTufwy84DCtkW
     map: pathname
     input_position: top
     lang: zh-CN
