@@ -25,15 +25,15 @@ avatar:
   img: /img/butterfly-icon.png
   effect: true
 
-# 首页大图（使用默认）
-index_img: /img/default.png
-default_top_img: /img/default.png
-archive_img: /img/default.png
-tag_img: /img/default.png
-category_img: /img/default.png
+# 首页大图 - 关闭默认图片，用纯色渐变
+index_img: false
+default_top_img: false
+archive_img: false
+tag_img: false
+category_img: false
 
-# 背景色
-background: '#f5f5f5'
+# 背景色 - 柔和的灰白渐变
+background: '#f8f9fa'
 
 # 文章封面
 cover:
@@ -94,7 +94,7 @@ footer:
   owner:
     enable: true
   copyright: true
-  custom_text: ''
+  custom_text: '陶然的博客 · 记录技术成长'
 
 # 右侧小工具
 aside:
@@ -112,7 +112,11 @@ aside:
       link: https://github.com/taoran-blog
   card_announcement:
     enable: true
-    content: 欢迎来到我的博客！
+    content: 欢迎来到陶然的博客！
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
   card_recent_post:
     enable: true
     limit: 5
@@ -148,6 +152,12 @@ search:
   path: /search.xml
   field: post
   content: true
+
+# 自定义 CSS 注入
+inject:
+  head:
+    # 首页顶部渐变背景
+    - <style>#page-header:not(.not-top-img):before {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);} #page-header #site-info {padding-top: 180px;padding-bottom: 120px;} #page-header #site-title {font-size: 2.5em;font-weight: 700;text-shadow: 0 2px 10px rgba(0,0,0,0.2);} #page-header #site-subtitle {font-size: 1.2em;opacity: 0.9;margin-top: 10px;}</style>
 
 # 评论系统 - Giscus（基于 GitHub Discussions）
 comments:
