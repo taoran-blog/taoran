@@ -12,11 +12,13 @@ menu:
   归档: /archives/ || fas fa-archive
   分类: /categories/ || fas fa-folder-open
   标签: /tags/ || fas fa-tags
+  友链: /links/ || fas fa-link
   关于: /about/ || fas fa-heart
 
 # 社交链接
 social:
-  fab fa-github: https://github.com/718292306 || Github || '#24292e'
+  fab fa-github: https://github.com/taoran-blog || Github || '#24292e'
+  fas fa-rss: /taoran/atom.xml || RSS || '#ff6600'
 
 # 头像（使用默认）
 avatar:
@@ -103,6 +105,11 @@ aside:
   position: right
   card_author:
     enable: true
+    button:
+      enable: true
+      icon: fab fa-github
+      text: 关注我
+      link: https://github.com/taoran-blog
   card_announcement:
     enable: true
     content: 欢迎来到我的博客！
@@ -142,6 +149,17 @@ search:
   field: post
   content: true
 
-# 评论系统
+# 评论系统 - Giscus（基于 GitHub Discussions）
 comments:
-  enable: false
+  enable: true
+  use: giscus
+  giscus:
+    repo: taoran-blog/taoran
+    repo_id:
+    category: Announcements
+    category_id:
+    map: pathname
+    input_position: top
+    lang: zh-CN
+    crossorigin: anonymous
+    lazy_load: true

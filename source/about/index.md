@@ -11,5 +11,5 @@ date: 2026-08-05 16:35:14
 
 ### 联系方式
 
-- GitHub: [我的主页](https://github.com/yourusername)
-- Email: yourname@example.com
+- GitHub: [taoran-blog](https://github.com/taoran-blog)
+- Email: taoran@example.com

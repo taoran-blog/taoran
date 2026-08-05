@@ -1,0 +1,11 @@
+- class_name: 友情链接
+  class_desc: 技术交流，共同进步
+  link_list:
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: /img/butterfly-icon.png
+      descr: Butterfly 主题官网
+    - name: Hexo
+      link: https://hexo.io/
+      avatar: /img/butterfly-icon.png
+      descr: 快速、简洁且高效的博客框架
