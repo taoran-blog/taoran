@@ -156,8 +156,6 @@ search:
 # 自定义 CSS 注入
 inject:
   head:
-    # 首页标题美化
-    - <style>#page-header:not(.not-top-img):before {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);} #page-header #site-info {padding-top: 200px;padding-bottom: 140px;} #page-header #site-title {font-size: 2.5em;font-weight: 700;text-shadow: 0 2px 15px rgba(0,0,0,0.3);} #page-header #site-subtitle {font-size: 1.2em;opacity: 0.9;margin-top: 10px;text-shadow: 0 1px 8px rgba(0,0,0,0.2);}</style>
 
 # 评论系统 - Giscus（基于 GitHub Discussions）
 comments:

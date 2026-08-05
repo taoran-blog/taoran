@@ -1,26 +1,30 @@
-// 自动为每篇文章分配渐变色背景
+// 自动为每篇文章分配纯色背景
 // 基于文章标题生成稳定颜色，同篇文章每次显示相同颜色
 
 const crypto = require('crypto');
 
-// 预设的渐变色方案（不依赖外部图片）
-const gradients = [
-  'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-  'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
-  'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-  'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-  'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-  'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
-  'linear-gradient(135deg, #fccb90 0%, #d57eeb 100%)',
-  'linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)',
-  'linear-gradient(135deg, #f2709c 0%, #ff9472 100%)',
-  'linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)',
-  'linear-gradient(135deg, #5ee7df 0%, #b490ca 100%)',
-  'linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)',
-  'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
-  'linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%)',
-  'linear-gradient(135deg, #f6d365 0%, #fda085 100%)',
-  'linear-gradient(135deg, #96fbc4 0%, #f9f586 100%)',
+// 预设的纯色方案（适合做背景的深色）
+const colors = [
+  '#667eea',
+  '#f5576c',
+  '#4facfe',
+  '#43e97b',
+  '#fa709a',
+  '#a18cd1',
+  '#d57eeb',
+  '#8ec5fc',
+  '#f2709c',
+  '#5ee7df',
+  '#b490ca',
+  '#d299c2',
+  '#30cfd0',
+  '#a1c4fd',
+  '#fda085',
+  '#96fbc4',
+  '#6c5ce7',
+  '#fd79a8',
+  '#00cec9',
+  '#0984e3',
 ];
 
 hexo.extend.filter.register('before_post_render', function (data) {
@@ -31,10 +35,9 @@ hexo.extend.filter.register('before_post_render', function (data) {
 
   // 根据文章标题生成稳定索引
   const seed = parseInt(crypto.createHash('md5').update(data.title).digest('hex').slice(0, 8), 16);
-  const index = seed % gradients.length;
+  const index = seed % colors.length;
 
-  // 使用渐变色作为背景
-  data.top_img = gradients[index];
+  data.top_img = colors[index];
 
   return data;
 });
