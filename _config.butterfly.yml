@@ -25,9 +25,9 @@ avatar:
   img: /img/butterfly-icon.png
   effect: true
 
-# 首页大图 - 关闭默认图片，用纯色渐变
-index_img: false
-default_top_img: false
+# 首页大图 - 用随机高清图
+index_img: https://picsum.photos/seed/home/1600/600
+default_top_img: https://picsum.photos/seed/default/1600/600
 archive_img: false
 tag_img: false
 category_img: false
@@ -156,8 +156,8 @@ search:
 # 自定义 CSS 注入
 inject:
   head:
-    # 首页顶部渐变背景
-    - <style>#page-header:not(.not-top-img):before {background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);} #page-header #site-info {padding-top: 180px;padding-bottom: 120px;} #page-header #site-title {font-size: 2.5em;font-weight: 700;text-shadow: 0 2px 10px rgba(0,0,0,0.2);} #page-header #site-subtitle {font-size: 1.2em;opacity: 0.9;margin-top: 10px;}</style>
+    # 首页标题美化
+    - <style>#page-header #site-info {padding-top: 180px;padding-bottom: 120px;} #page-header #site-title {font-size: 2.5em;font-weight: 700;text-shadow: 0 2px 15px rgba(0,0,0,0.3);} #page-header #site-subtitle {font-size: 1.2em;opacity: 0.9;margin-top: 10px;text-shadow: 0 1px 8px rgba(0,0,0,0.2);}</style>
 
 # 评论系统 - Giscus（基于 GitHub Discussions）
 comments:
